@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A free personal digital library of timeless ebooks.">
+    <title>Gutenberg Project — Browse by Subjects</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/by-subject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/mobile-nav.js" defer></script>
+    <script src="js/by-subject-filter.js" defer></script>
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="topbar">
+        <div class="container topbar-inner">
+          <p class="topbar-tagline">Your Personal Digital Library</p>
+          <a
+            class="topbar-link"
+            href="https://www.gutenberg.org/donate/"
+            target="_blank"
+            rel="nofollow"
+          >
+            Donate to Keep Books Free
+          </a>
+        </div>
+      </div>
+
+      <div class="site-header">
+        <div class="container nav-inner">
+          <a class="brand" href="index.html" aria-label="Gutenberg Project Home">
+            Gutenberg Project
+            <small>sharing stories since 1971</small>
+          </a>
+
+          <form class="header-search" action="search-result.html" method="get" role="search">
+            <div class="search-row">
+              <input
+                aria-label="Search the library"
+                name="query"
+                placeholder="Search by title, author or subject"
+                type="text"
+              >
+              <button type="submit">Search</button>
+            </div>
+            <a class="advanced-search-link" href="advanced-search.html">
+              Advanced Search
+              <svg class="arrow" viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="M1 8h13M9 3l5 5-5 5"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </form>
+
+          <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="mobile-nav-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+            <a href="by-subject.html">Browse by Subject</a>
+            <a href="reading-list.html">Reading List</a>
+            <a href="about.html">About Us</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- main content -->
+    <main id="#by-subject">
+
+      <!-- intro -->
+      <section class="section-panel bysubject-intro">
+        <div class="section-heading">
+          <h2>Browse Bookshelf by Subject</h2>
+          <p>Be inspired by our collections. Find your next read.</p>
+        </div>
+        <div class="customized-list">
+          <ul class="bookshelf-status" aria-label="current bookshelf">
+            <li>All books (10)</li>
+            <li>Current Read (1)</li>
+            <li>Next Read (3)</li>
+            <li>Finished (1)</li>
+          </ul>
+          <button onclick="window.location.href='reading-list.html';">
+            <span>+ </span>
+            View Reading List
+          </button>
+        </div>
+      </section>
+
+      <!-- filter -->
+      <section class="section-panel peach" aria-label="Filter books">
+        <div class="filter-results">
+          <form class="filter-form" action="/search-result.html" method="get">
+            <label>
+              <span>Book title</span>
+              <input name="query" placeholder="Any title" type="search" />
+            </label>
+            <label>
+              <span>Author</span>
+              <input name="author" placeholder="Any author" type="search" />
+            </label>
+            <label>
+              <span>Language</span>
+              <select name="language">
+                <option value="English">English</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Spanish">Spanish</option>
+              </select>
+            </label>
+            <div class="filter-actions">
+              <button type="submit">Apply Filter</button>
+              <button type="reset">Clear all fields</button>
+              <span>Combines with your subject choices below.</span>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="subject-browser">
+        <aside class="subject-sidebar">
+          <h2>Subjects</h2>
+          <p>Let us help you pick a book</p>
+          <div class="grid two">
+            <fieldset>
+              <legend>What interests you?</legend>
+              <label>
+                <input type="checkbox">
+                Adventure
+              </label>
+              <label>
+                <input type="checkbox">
+                Fiction
+              </label>
+              <label>
+                <input type="checkbox">
+                Mystery
+              </label>
+              <label>
+                <input type="checkbox" checked>
+                <strong>Romance</strong>
+              </label>
+              <label>
+                <input type="checkbox">
+                Education Reference
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend>Preferred length</legend>
+              <label>
+                <input type="radio" name="length" checked>
+                Short · under 100 pages
+              </label>
+              <label>
+                <input type="radio" name="length">
+                Medium · 100–300 pages
+              </label>
+              <label>
+                <input type="radio" name="length">
+                Long · 300+ pages
+              </label>
+              <label>
+                <input type="radio" name="length">
+                Any length
+              </label>
+            </fieldset>
+          </div>
+          <small>Page ranges vary by print edition</small>
+          <button class="recommend-button" type="button">Recommend books</button>
+          <button class="reset-link" type="button">Reset preferences</button>
+        </aside>
+
+        <div class="subject-catalog">
+          <h2>Romance</h2>
+          <div class="catalog-tools">
+            <span>Sort by</span>
+            <div>
+              <button class="active-sort" type="button">Popularity ↓</button>
+              <button type="button">Title</button>
+              <button type="button">Author</button>
+              <button type="button">Release date</button>
+            </div>
+          </div>
+
+          <div class="catalog-grid" data-language="English">
+            <article class="catalog-card">
+              <img src="img/books/pride-prejudice.jpg" alt="Cover of Pride and Prejudice" />
+              <h3>Pride and Prejudice</h3>
+              <p>Jane Austen</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/middlemarch.jpg" alt="Cover of Middlemarch" />
+              <h3>Middlemarch</h3>
+              <p>George Eliot</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/jane-eyre.jpg" alt="Cover of Jane Eyre" />
+              <h3>Jane Eyre</h3>
+              <p>Charlotte Brontë</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/room.jpg" alt="Cover of A Room with a View" />
+              <h3>A Room with a View</h3>
+              <p>E. M. Forster</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/blue-castle.jpg" alt="Cover of The Blue Castle" />
+              <h3>The Blue Castle</h3>
+              <p>L. M. Montgomery</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/sense.jpg" alt="Cover of Sense and Sensibility" />
+              <h3>Sense and Sensibility</h3>
+              <p>Jane Austen</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/wuthering.jpg" alt="Cover of Wuthering Heights" />
+              <h3>Wuthering Heights</h3>
+              <p>Emily Brontë</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/emma.jpg" alt="Cover of Emma" />
+              <h3>Emma</h3>
+              <p>Jane Austen</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/anna-karenina.jpg" alt="Cover of Anna Karenina" />
+              <h3>Anna Karenina</h3>
+              <p>Leo Tolstoy</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/persuasion.jpg" alt="Cover of Persuasion" />
+              <h3>Persuasion</h3>
+              <p>Jane Austen</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/northanger.jpg" alt="Cover of Northanger Abbey" />
+              <h3>Northanger Abbey</h3>
+              <p>Jane Austen</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/mansfield.jpg" alt="Cover of Mansfield Park" />
+              <h3>Mansfield Park</h3>
+              <p>Jane Austen</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/woman-white.jpg" alt="Cover of The Woman in White" />
+              <h3>The Woman in White</h3>
+              <p>Wilkie Collins</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/age-innocence.jpg" alt="Cover of The Age of Innocence" />
+              <h3>The Age of Innocence</h3>
+              <p>Edith Wharton</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/return-native.jpg" alt="Cover of The Return of the Native" />
+              <h3>The Return of the Native</h3>
+              <p>Thomas Hardy</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/ivanhoe.jpg" alt="Cover of Ivanhoe" />
+              <h3>Ivanhoe</h3>
+              <p>Walter Scott</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/henrietta.jpg" alt="Cover of Henrietta Temple" />
+              <h3>Henrietta Temple</h3>
+              <p>Benjamin Disraeli</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/mutual-friend.jpg" alt="Cover of Our Mutual Friend" />
+              <h3>Our Mutual Friend</h3>
+              <p>Charles Dickens</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/romeo-juliet.jpg" alt="Cover of Romeo and Juliet" />
+              <h3>Romeo and Juliet</h3>
+              <p>William Shakespeare</p>
+              <span>Romance</span>
+            </article>
+            <article class="catalog-card">
+              <img src="img/books/young-werther.jpg" alt="Cover of The Sorrows of Young Werther" />
+              <h3>The Sorrows of Young Werther</h3>
+              <p>Johann Wolfgang von Goethe</p>
+              <span>Romance</span>
+            </article>
+          </div>
+          <p class="filter-result-count" role="status" aria-live="polite"></p>
+
+          <div class="catalog-bottom">
+            <div class="catalog-tools">
+              <span>Sort by</span>
+              <div>
+                <button class="active-sort" type="button">Popularity ↓</button>
+                <button type="button">Title</button>
+                <button type="button">Release date</button>
+              </div>
+            </div>
+            <div class="pagination">
+              <span>Showing 1–20 of 24546 results</span>
+              <button type="button" aria-label="Previous page">←</button>
+              <button type="button" aria-label="Next page">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          <strong>Gutenberg Project</strong>
+          <span>Open to everyone. Supported by volunteers.</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://www.gutenberg.org/contact/">Contact Us</a>
+          <a href="https://www.gutenberg.org/a11y/">Accessibility</a>
+          <a href="https://www.gutenberg.org/policy/privacy_policy.html">Privacy</a>
+          <a href="https://www.gutenberg.org/help/copyright.html">Copyright</a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>

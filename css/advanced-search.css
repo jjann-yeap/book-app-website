@@ -1,0 +1,88 @@
+@import url("style.css");
+
+/* 
+* {
+  outline: 1px solid red !important;
+} 
+*/
+
+/* Advanced Search page styles */
+#advanced-search {
+  min-height: auto;
+}
+
+.advanced-search-form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4) var(--space-10);
+  max-width: 100%;
+  margin-top: var(--space-16);
+}
+
+.form-group {
+  display: flex;
+  flex-basis: var(--form-group-width);
+  flex-flow: row wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-4);
+}
+
+.form-group label {
+  width: var(--form-label-width);
+  text-align: left;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  flex: 1 1 var(--form-input-width);
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-group select {
+  padding: var(--space-1);
+  background-color: transparent;
+  border: 1px solid var(--color-button-border);
+  cursor: pointer;
+  appearance: none; /* Removes default browser arrows for a clean design */
+}
+
+.advanced-search-form input[type="submit"] {
+  width: min(var(--button-width), 100%);
+  margin-top: var(--space-5);
+  padding: var(--space-2) var(--space-5);
+  background: var(--color-button);
+  color: var(--color-text-inverse);
+  font-size: var(--text-md);
+  border: 1px solid var(--color-button-border);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.advanced-search-form input[type="submit"]:hover {
+  background: var(--color-peach);
+  color: var(--color-text);
+  box-shadow: none !important;
+}
+
+@media (min-width: 821px) {
+  .form-group {
+    flex-wrap: nowrap;
+  }
+
+  .form-group label {
+    text-align: right;
+  }
+
+  .form-group input[type="text"],
+  .form-group select {
+    width: auto;
+    max-width: var(--form-input-width);
+  }
+
+  .advanced-search-form input[type="submit"] {
+    margin-left: calc(var(--form-label-width) + var(--space-4));
+  }
+}

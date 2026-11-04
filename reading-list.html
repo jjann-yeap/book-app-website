@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A free personal digital library of timeless ebooks.">
+    <title>Gutenberg Project — Reading List</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reading-list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/mobile-nav.js" defer></script>
+    <script src="js/simple-search.js" defer></script>
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+
+  <body>
+    
+    <header>
+      <div class="topbar">
+        <div class="container topbar-inner">
+          <p class="topbar-tagline">Your Personal Digital Library</p>
+          <a class="topbar-link" href="https://www.gutenberg.org/donate/" target="_blank" rel="nofollow">Donate to Keep Books Free</a>
+        </div>
+      </div>
+
+      <div class="site-header">
+        <div class="container nav-inner">
+          <a class="brand" href="index.html" aria-label="Gutenberg Project Home">
+            Gutenberg Project
+            <small>sharing stories since 1971</small>
+          </a>
+
+          <form class="header-search" action="search-result.html" method="get" role="search">
+            <div class="search-row">
+              <input id="search-input" aria-label="Search the library" name="query" placeholder="Search by title, author or subject" type="search">
+              <button type="submit">Search</button>
+            </div>
+            <a class="advanced-search-link" href="advanced-search.html">Advanced Search<svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </form>
+
+          <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+              <span class="mobile-nav-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </span>
+              <span></span>
+          </button>
+
+          <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+            <a href="by-subject.html">Browse by Subject</a>
+            <a href="reading-list.html">Reading List</a>
+            <a href="about.html">About Us</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <!-- main content -->
+    <main id="#reading-list">
+      <section class="section-panel reading-intro">
+        <div class="section-heading">
+          <h2>Personalized Reading List</h2>
+          <p>Keep your place, plan your next read, and revisit your favorites.</p>
+        </div>
+        <div class="customized-list">
+          <ul class="bookshelf-status" aria-label="current bookshelf">
+            <li>All books (10)</li>
+            <li>Current Read (1)</li>
+            <li>Next Read (3)</li>
+            <li>Finished (1)</li>
+          </ul>
+          <button onclick="window.location.href='by-subject.html';">
+            <span>+ </span>
+            Find Next Read
+          </button>
+        </div>
+      </section>
+
+      <!-- reading progress -->
+      <section class="section-panel peach" id="progress">
+        <div class="section-heading">
+          <h2>Reading Progress</h2>
+          <a class="text-link" href="reading-list.html">Full Reading List →</a>
+        </div>
+        <div class="progress-content">
+          <img src="img/books/pride-prejudice.jpg" alt="Pride and Prejudice cover">
+          <div class="current-book">
+            <h3>Pride and Prejudice</h3>
+            <p>Jane Austen</p>
+            <div class="progress-bar"><span></span></div>
+            <small>1% · Chapter 1</small>
+          </div>
+          <p class="book-excerpt">
+            It is a truth universally acknowledged, that a single man in
+            possession of a good fortune, must be in want of a wife. However
+            little known the feelings or views of such a man may be on his
+            first entering a neighbourhood.
+          </p>
+          <button class="midsize-button">Resume Chapter 1</button>
+        </div>
+        <p class="panel-note">Your last read. Pick up where you left off.</p>
+      </section>
+
+      <!-- personalized list -->
+      <section class="section-panel reading-group next-read">
+        <div class="section-heading row">
+          <h2>Next read</h2>
+          <span>3 books saved for later</span>
+        </div>
+
+        <!-- book 1 -->
+        <article class="reading-row">
+          <img src="img/books/sherlock.jpg" alt="Cover of The Adventures of Sherlock Holmes" />
+          <div><h3>The Adventures of Sherlock Holmes</h3><p>Arthur Conan Doyle · Sci-Fi/Mystery</p></div>
+          <select aria-label="Status for The Adventures of Sherlock Holmes"><option>Status: Next read</option><option>Current</option><option>Finished</option></select>
+          <a href="#">Start reading →</a><button type="button">Remove</button>
+        </article>
+
+        <!-- book 2 -->
+        <article class="reading-row">
+          <img src="img/books/treasure.jpg" alt="Cover of Treasure Island" />
+          <div><h3>Treasure Island</h3><p>Robert Louis Stevenson · Adventure</p></div>
+          <select aria-label="Status for Treasure Island"><option>Status: Next read</option><option>Current</option><option>Finished</option></select>
+          <a href="#">Start reading →</a><button type="button">Remove</button>
+        </article>
+
+        <!-- book 3 -->
+        <article class="reading-row">
+          <img src="img/books/time.jpg" alt="Cover of The Time Machine" />
+          <div><h3>The Time Machine</h3><p>H. G. Wells · Science Fiction</p></div>
+          <select aria-label="Status for The Time Machine"><option>Status: Next read</option><option>Current</option><option>Finished</option></select>
+          <a href="#">Start reading →</a><button type="button">Remove</button>
+        </article>
+      </section>
+
+      <!-- finished reading -->
+      <section class="section-panel reading-group finished">
+        <div class="section-heading row">
+          <h2>Finished</h2>
+          <span>1 book completed</span>
+        </div>
+        <article class="reading-row">
+          <img src="img/books/moby-dick.jpg" alt="Cover of Moby Dick" />
+          <div><h3>Moby Dick</h3><p>Herman Melville</p><small>✓ Finished · 100%</small></div>
+          <select aria-label="Status for Moby Dick"><option>Status: Finished</option><option>Current</option><option>Next read</option></select>
+          <a href="#">Read again</a>
+        </article>
+      </section>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          <strong>Gutenberg Project</strong>
+          <span>Open to everyone. Supported by volunteers.</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://www.gutenberg.org/contact/">Contact Us</a>
+          <a href="https://www.gutenberg.org/a11y/">Accessibility</a>
+          <a href="https://www.gutenberg.org/policy/privacy_policy.html">Privacy</a>
+          <a href="https://www.gutenberg.org/help/copyright.html">Copyright</a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>

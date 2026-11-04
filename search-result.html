@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A free personal digital library of timeless ebooks.">
+    <title>Gutenberg Project — Search Results</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/search-result.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/mobile-nav.js" defer></script>
+    <script src="js/simple-search.js" defer></script>
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+
+  <body>
+    
+    <header>
+      <div class="topbar">
+        <div class="container topbar-inner">
+          <p class="topbar-tagline">Your Personal Digital Library</p>
+          <a class="topbar-link" href="https://www.gutenberg.org/donate/" target="_blank" rel="nofollow">Donate to Keep Books Free</a>
+        </div>
+      </div>
+
+      <div class="site-header">
+        <div class="container nav-inner">
+          <a class="brand" href="index.html" aria-label="Gutenberg Project Home">
+            Gutenberg Project
+            <small>sharing stories since 1971</small>
+          </a>
+
+          <form class="header-search" action="search-result.html" method="get" role="search">
+            <div class="search-row">
+              <input id="search-input" aria-label="Search the library" name="query" placeholder="Search by title, author or subject" type="search">
+              <button type="submit">Search</button>
+            </div>
+            <a class="advanced-search-link" href="advanced-search.html">Advanced Search<svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </form>
+
+          <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+              <span class="mobile-nav-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </span>
+              <span></span>
+          </button>
+
+          <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+            <a href="by-subject.html">Browse by Subject</a>
+            <a href="reading-list.html">Reading List</a>
+            <a href="about.html">About Us</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <!-- main content -->
+    <main id="search-result">
+      <div class="container search-page">
+        <nav class="search-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span>Search results</span>
+        </nav>
+
+        <div class="results-header">
+          <div>
+            <span class="eyebrow">Search Gutenberg's Database</span>
+            <h1 id="results-title">Search results</h1>
+            <p id="results-summary" aria-live="polite">
+              Browse all books in the collection.
+            </p>
+          </div>
+
+          <label class="sort-control" for="sort-results">
+            <span>Sort by</span>
+            <select id="sort-results">
+              <option value="relevance">Relevance</option>
+              <option value="title">Title A–Z</option>
+              <option value="author">Author A–Z</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="results-layout">
+          <aside class="results-filters" aria-label="Search filters">
+            <h2>Filter results</h2>
+            <fieldset>
+              <legend>Subject</legend>
+              <label><input type="radio" name="subject" value="all" checked> All subjects</label>
+              <label><input type="radio" name="subject" value="romance"> Romance</label>
+              <label><input type="radio" name="subject" value="mystery"> Mystery</label>
+              <label><input type="radio" name="subject" value="adventure"> Adventure</label>
+              <label><input type="radio" name="subject" value="fiction"> Fiction</label>
+              <label><input type="radio" name="subject" value="children"> Children</label>
+              <label><input type="radio" name="subject" value="biography"> Biography</label>
+              <label><input type="radio" name="subject" value="history"> History</label>
+            </fieldset>
+            <div class="filter-note">
+              <strong>Always free</strong>
+              <p>Every title in this collection is available to read at no cost.</p>
+            </div>
+          </aside>
+
+          <div class="results-column">
+            <div id="results-list" class="results-list">
+            </div>
+
+            <div id="no-results" class="no-results" hidden>
+              <h2>No books found</h2>
+              <p>Try a different title, author, or subject.</p>
+              <a href="search-result.html">View the complete collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          <strong>Gutenberg Project</strong>
+          <span>Open to everyone. Supported by volunteers.</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://www.gutenberg.org/contact/">Contact Us</a>
+          <a href="https://www.gutenberg.org/a11y/">Accessibility</a>
+          <a href="https://www.gutenberg.org/policy/privacy_policy.html">Privacy</a>
+          <a href="https://www.gutenberg.org/help/copyright.html">Copyright</a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>

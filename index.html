@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A free personal digital library of timeless ebooks.">
+    <title>Gutenberg Project — Your Personal Digital Library</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/mobile-nav.js" defer></script>
+    <script src="js/suggested-carousel.js" defer></script>
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+
+  <body>
+    
+    <header>
+
+      <div class="topbar">
+        <div class="container topbar-inner">
+          <p class="topbar-tagline">Your Personal Digital Library</p>
+          <a class="topbar-link" href="https://www.gutenberg.org/donate/" target="_blank" rel="nofollow">Donate to Keep Books Free</a>
+        </div>
+      </div>
+
+      <div class="site-header">
+        <div class="container nav-inner">
+          <a class="brand" href="#" aria-label="Gutenberg Project Home">
+            Gutenberg Project
+            <small>sharing stories since 1971</small>
+          </a>
+
+          <form class="header-search" action="search-result.html" method="get" role="search">
+            <div class="search-row">
+              <input aria-label="Search the library" name="query" placeholder="Search by title, author or subject" type="text">
+              <button type="submit">Search</button>
+            </div>
+            <a class="advanced-search-link" href="advanced-search.html">Advanced Search<svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </form>
+
+          <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+              <span class="mobile-nav-icon" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </span>
+              <span></span>
+          </button>
+
+          <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+            <a href="by-subject.html">Browse by Subject</a>
+            <a href="reading-list.html">Reading List</a>
+            <a href="about.html">About Us</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <!-- main content -->
+    <main  id="index">
+        
+      <!-- Hero Section -->
+      <section class="hero" id="website-hero">
+        <div class="hero-intro">
+          <span class="eyebrow">Timeless literature for everyone</span>
+          <h1>Your next great read.<br />Always free.</h1>
+          <p>
+            Extraordinary stories, timeless ideas, and new discoveries. 
+            Explore over 75,000 free ebooks. No fees. No sign-ups. No apps required. 
+          </p>
+          <p>Just the joy of reading.</p>
+        </div>
+        <div class="hero-image" role="img" aria-label="Sepia mountain lake landscape">
+        </div>
+      </section>
+
+      <!-- Reading Progress -->
+      <section class="section-panel peach" id="progress">
+        <div class="section-heading">
+          <h2>Reading Progress</h2>
+          <a class="text-link" href="reading-list.html">Full Reading List →</a>
+        </div>
+        <div class="progress-content">
+          <img src="img/books/pride-prejudice.jpg" alt="Pride and Prejudice cover">
+          <div class="current-book">
+            <h3>Pride and Prejudice</h3>
+            <p>Jane Austen</p>
+            <div class="progress-bar"><span></span></div>
+            <small>1% · Chapter 1</small>
+          </div>
+          <p class="book-excerpt">
+            It is a truth universally acknowledged, that a single man in
+            possession of a good fortune, must be in want of a wife. However
+            little known the feelings or views of such a man may be on his
+            first entering a neighbourhood.
+          </p>
+          <button class="midsize-button">Resume Chapter 1</button>
+        </div>
+        <p class="panel-note">Your last read. Pick up where you left off.</p>
+      </section>
+
+      <!-- Suggested Reads -->
+      <section class="section-panel border" id="suggested-books">
+        <div class="section-heading">
+          <h2>Suggested Reads</h2>
+          <a class="text-link" href="#">Inspire me →</a>
+        </div>
+
+        <!-- carousel -->
+        <div class="book-grid" id="suggested-books-track" role="region" aria-label="Suggested books" tabindex="0">
+
+          <!-- book 1 -->
+          <a class="book-card" href="https://www.gutenberg.org/ebooks/1661" target="_blank" rel="noopener noreferrer">
+            <div class="bookcover">
+              <img src="img/books/sherlock.jpg" alt="Cover of The Adventures of Sherlock Holmes">
+            </div>
+            <div class="book-meta">
+              <h3>The Adventures of Sherlock Holmes</h3>
+              <p>Arthur Conan Doyle</p>
+              <span>Mystery</span>
+            </div>
+          </a>
+          
+          <!-- book 2 -->
+          <a class="book-card" href="https://www.gutenberg.org/ebooks/120" target="_blank" rel="noopener noreferrer">
+            <div class="bookcover">
+              <img src="img/books/treasure.jpg" alt="Cover of Treasure Island">
+            </div>
+            <div class="book-meta">
+              <h3>Treasure Island</h3>
+              <p>Robert Louis Stevenson</p>
+              <span>Adventure</span>
+            </div>
+          </a>
+
+          <!-- book 3 -->
+          <a class="book-card" href="https://www.gutenberg.org/ebooks/35" target="_blank" rel="noopener noreferrer">
+            <div class="bookcover">
+              <img src="img/books/time.jpg" alt="Cover of The Time Machine">
+            </div>
+            <div class="book-meta">
+              <h3>The Time Machine</h3>
+              <p>H. G. Wells</p>
+              <span>Science Fiction</span>
+            </div>
+          </a>
+
+          <!-- book 4 -->
+          <a class="book-card" href="https://www.gutenberg.org/ebooks/37106" target="_blank" rel="noopener noreferrer">
+            <div class="bookcover">
+              <img src="img/books/little-women.jpg" alt="Cover of Little Women">
+            </div>
+            <div class="book-meta">
+              <h3>Little Women</h3>
+              <p>Louisa May Alcott</p>
+              <span>Fiction</span>
+            </div>
+          </a>
+
+          <!-- book 5 -->
+          <a class="book-card" href="https://www.gutenberg.org/ebooks/2641" target="_blank" rel="noopener noreferrer">
+            <div class="bookcover">
+              <img src="img/books/room.jpg" alt="Cover of A Room with a View">
+            </div>
+            <div class="book-meta">
+              <h3>A Room with a View</h3>
+              <p>E. M. Forster</p>
+              <span>Romance</span>
+            </div>
+          </a>
+
+          <!-- book 6 -->
+          <a class="book-card" href="https://www.gutenberg.org/ebooks/45631" target="_blank" rel="noopener noreferrer">
+            <div class="bookcover">
+              <img src="img/books/12years-slave.jpg" alt="Cover of Twelve Years a Slave">
+            </div>
+            <div class="book-meta">
+              <h3>Twelve Years a Slave</h3>
+              <p>Solomon Northup</p>
+              <span>Biography</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="carousel-footer">
+          <p class="panel-note">Recommended based on general popularity.</p>
+          <div class="pagination">
+            <p id="suggested-books-status" aria-live="polite"></p>
+            <div class="carousel-control" role="group" aria-label="Suggested books controls">
+              <button class="outline" type="button" id="suggested-books-previous" aria-label="Previous suggested book">←</button>
+              <button class="outline" type="button" id="suggested-books-next" aria-label="Next suggested book">→</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- new arrivals -->
+      <section class="section-panel" id="new-arrivals">
+        <div class="section-heading">
+          <h2>New arrivals</h2>
+          <a class="text-link" href="https://www.gutenberg.org/ebooks/search/?sort_order=release_date" target="_blank" rel="noopener noreferrer">See all arrivals →</a>
+        </div>
+        
+        <div class="arrival-grid">
+          
+          <!-- new 1 -->
+          <a class="arrival-card" href="https://www.gutenberg.org/ebooks/113" target="_blank" rel="noopener noreferrer">
+            <img src="img/books/secret-garden.jpg" alt="Cover of The Secret Garden">
+            <div class="arrival-info">                
+              <h3>The Secret Garden</h3>
+              <p>Frances Hodgson Burnett</p>
+              <p>Fiction</p>
+            </div>
+          </a>
+
+          <!-- new 2 -->
+          <a class="arrival-card" href="https://www.gutenberg.org/ebooks/244" target="_blank" rel="noopener noreferrer">
+            <img src="img/books/scarlet.jpg" alt="Cover of A Study in Scarlet">
+            <div class="arrival-info">                
+              <h3>A Study in Scarlet</h3>
+              <p>Arthur Conan Doyle</p>
+              <p>Mystery</p>
+            </div>
+          </a>
+
+          <!-- new 3 -->
+          <a class="arrival-card" href="https://www.gutenberg.org/ebooks/55" target="_blank" rel="noopener noreferrer">
+            <img src="img/books/oz.jpg" alt="Cover of The Wonderful Wizard of Oz">
+            <div class="arrival-info">                
+              <h3>The Wonderful Wizard of Oz</h3>
+              <p>L. Frank Baum</p>
+              <p>Adventure</p>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Browse by Subjects -->
+      <section class="section-panel border" id="browse-subjects">
+        <div class="section-heading">
+          <h2>Browse by Subject</h2>
+        </div>
+        
+        <div class="subject-grid">
+          <button class="outline">Romance<span> →</span></button>
+          <button class="outline">Mystery<span> →</span></button>
+          <button class="outline">Adventure<span> →</span></button>
+          <button class="outline">Fiction<span> →</span></button>
+          <button class="outline">Children<span> →</span></button>
+          <button class="outline">Biography<span> →</span></button>
+        </div>
+        <p class="panel-note">A portal into past wisdom</p>
+      </section>
+
+      <!-- Browse by Collections -->
+      <section class="section-panel border" id="browse-collections">
+        <div class="section-heading">
+          <h2>Explore Complete Collection</h2>
+        </div>
+        
+        <div class="collection-grid">
+          <button class="outline">Literature</button>
+          <button class="outline">History</button>
+          <button class="outline">Social Sciences</button>
+          <button class="outline">Lifestyle &amp; Hobbies</button>
+          <button class="outline">Religion &amp; Philosophy</button>
+          <button class="outline">Arts &amp; Culture</button>
+          <button class="outline">Health &amp; Medicine</button>
+          <button class="outline">Science &amp; Technology</button>
+          <button class="outline">Dictionary</button>
+          <button class="outline">Encyclopedia</button>
+          <button class="outline">Report</button>
+          <button class="outline">Journal</button>
+        </div>
+        <p class="panel-note">A shelf to meet every interest</p>
+      </section>
+
+      <!-- Gutenberg's Mission -->
+      <section class="section-panel mission-inner" id="mission"> 
+        <h2 class="mission-title">Books Beyond Borders</h2>  
+        <div>
+          <p>
+            Project Gutenberg is a volunteer-powered library of free ebooks.
+            Explore literature in the public domain, build your own reading
+            list, and enjoy a book wherever you are.
+          </p>
+          <p>
+            Since 1971, Project Gutenberg has been working toward a simple
+            idea: making the world's books available to everyone. Our
+            collection is digitized and proofread by volunteers who believe a
+            good book should never be out of reach. Every page is a gift from
+            one reader to another.
+          </p>
+          <a href="#">The Project Gutenberg's Story →</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          <strong>Gutenberg Project</strong>
+          <span>Open to everyone. Supported by volunteers.</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="https://www.gutenberg.org/contact/">Contact Us</a>
+          <a href="https://www.gutenberg.org/a11y/">Accessibility</a>
+          <a href="https://www.gutenberg.org/policy/privacy_policy.html">Privacy</a>
+          <a href="https://www.gutenberg.org/help/copyright.html">Copyright</a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>
