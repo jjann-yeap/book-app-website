@@ -78,8 +78,8 @@
   --footer-height: 200px;
 
   /* form element */
-  --form-group-width: 800px;
-  --form-input-width: 300px;
+  --form-group-width: 50vw;
+  --form-input-width: 40vw;
   --form-label-width: 120px;
   --search-width: 340px;
   --select-height: 2.75rem;
