@@ -65,12 +65,18 @@ reading-group {
   text-decoration: none;
 }
 
-.reading-row > button {
-  border: 0;
-  background: transparent;
-  padding: 0;
-  font-size: 9px;
-  text-decoration: underline;
+.reading-row > a:hover {
+  background: var(--color-charcoal-light) ;
+}
+
+.reading-row > select:hover {
+  background: var(--color-peach) ;
+}
+
+.reading-row > .outline {
+  height: var(--select-height);
+  padding: 0 var(--space-3);
+  font-size: var(--text-sm);
 }
 
 

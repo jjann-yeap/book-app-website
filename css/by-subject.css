@@ -92,7 +92,7 @@
 }
 
 .filter-actions button {
-  min-height: var(--button-height);
+  min-height: var(--pagination);
   padding: var(--space-2) var(--space-4);
   font-size: var(--text-xs);
 }
@@ -308,10 +308,8 @@
 }
 
 .pagination button {
-  width: 2rem;
-  height: 2rem;
-  border: 1px solid var(--color-border-darker);
-  background: transparent;
+  width: var(--button-square-height);
+  height: var(--button-square-height);
   color: var(--color-text);
   font-size: var(--text-sm);
 }

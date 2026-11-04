@@ -83,7 +83,8 @@
   --form-label-width: 120px;
   --search-width: 340px;
   --select-height: 2.75rem;
-  --button-height: 2.5rem;
+  --button-rectangle-height: 2.5rem;
+  --button-square-height: 2rem;
 
 }
 
@@ -477,7 +478,7 @@ main > section {
 }
 
 .section-heading h2 {
-  margin: 0;
+  /* margin-bottom: var(--space-1); */
   font-size: var(--text-lg); /* 22px; */
   line-height: 1.15;
   font-weight: 700;
@@ -487,7 +488,6 @@ main > section {
   margin-top: var(--space-2);
   color: var(--color-text-muted);
   font-size: var(--text-sm);
-  /* max-width: 56ch; */
 }
 
 .text-link {
@@ -643,19 +643,21 @@ main > section {
   gap: var(--space-1);
 }
 
-.carousel-footer button {
-  width: 36px;
-  height: 36px;
+.carousel-control > button {
+  width: var(--button-square-height);
+  height: var(--button-square-height);
+  color: var(--color-text);
+  font-size: var(--text-sm);
 }
 
-.carousel-footer button:disabled {
+.carousel-control > button:disabled {
   opacity: 0.45;
   cursor: not-allowed;
 }
 
-.carousel-footer button:disabled:hover {
-  background: var(--color-button);
-  color: var(--color-text-inverse);
+.carousel-control > button:disabled:hover {
+  background: var(--color-charcoal-light);
+  color: var(--color-text);
 }
 
 /* ----------------------------------------------------------
